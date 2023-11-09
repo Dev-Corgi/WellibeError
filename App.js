@@ -2,18 +2,15 @@ import {
   NavigationContainer,
   createNavigationContainerRef,
 } from "@react-navigation/native";
-import React, { useState } from "react";
+import {React,  useState } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView, StyleSheet, useColorScheme } from "react-native";
-import Login from "./src/screens/Login";
-import Intro from "./src/screens/Intro";
-import Registration from "./src/screens/Registration";
-import Registration1 from "./src/screens/Registration1";
-import Registration2 from "./src/screens/Registration2";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import {Login} from "./src/screens/Login";
+import {Intro} from "./src/screens/Intro";
+import {Registration} from "./src/screens/Registration";
 // import * as Font from "expo-font";
 import { useFonts } from 'expo-font';
-import AppLoading from "expo-app-loading";
+import {AppLoading} from "expo-app-loading";
 
 const Stack = createNativeStackNavigator();
 export const navigationRef = createNavigationContainerRef();
