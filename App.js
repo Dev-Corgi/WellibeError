@@ -1,20 +1,115 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  NavigationContainer,
+  createNavigationContainerRef,
+} from "@react-navigation/native";
+import React, { useState } from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SafeAreaView, StyleSheet, useColorScheme } from "react-native";
+import Login from "./src/screens/Login";
+import Intro from "./src/screens/Intro";
+import Registration from "./src/screens/Registration";
+import Registration1 from "./src/screens/Registration1";
+import Registration2 from "./src/screens/Registration2";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+// import * as Font from "expo-font";
+import { useFonts } from 'expo-font';
+import AppLoading from "expo-app-loading";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Stack = createNativeStackNavigator();
+export const navigationRef = createNavigationContainerRef();
+
+
+// const getFonts = async () => {
+//   await Font.loadAsync({
+//     "Pretendard-Bold": require("./assets/fonts/Pretendard-Bold.otf"),
+//     "Pretendard-Regular": require("./assets/fonts/Pretendard-Regular.otf"),
+//     "Pretendard-SemiBold": require("./assets/fonts/Pretendard-SemiBold.otf"),
+//     "Pretendard-Light": require("./assets/fonts/Pretendard-Light.otf"),
+//   });
+// };
+
+function App() {
+
+  let [fontsLoaded] = useFonts({
+    PretendardBold: require("./assets/fonts/Pretendard-Bold.otf"),
+    PretendardRegular: require("./assets/fonts/Pretendard-Regular.otf"),
+    PretendardSemiBold: require("./assets/fonts/Pretendard-SemiBold.otf"),
+    PretendardLight: require("./assets/fonts/Pretendard-Light.otf"),
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+  return(
+    <NavigationContainer ref={navigationRef}>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name="LogIn"
+        component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Intro"
+        component={Intro}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Registration"
+        component={Registration}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
+  )
+
+
+  // const [isReady, setIsReady] = useState(false);
+
+  // return isReady ? (
+  //   <NavigationContainer ref={navigationRef}>
+  //     <Stack.Navigator screenOptions={{ headerShown: false }}>
+  //       <Stack.Screen
+  //         name="LogIn"
+  //         component={Login}
+  //         options={{ headerShown: false }}
+  //       />
+  //       <Stack.Screen
+  //         name="Intro"
+  //         component={Intro}
+  //         options={{ headerShown: false }}
+  //       />
+  //       <Stack.Screen
+  //         name="Registration"
+  //         component={Registration}
+  //         options={{ headerShown: false }}
+  //       />
+  //     </Stack.Navigator>
+  //   </NavigationContainer>
+  // ) : (
+  //   <AppLoading
+  //     startAsync={getFonts}
+  //     onFinish={() => setIsReady(true)}
+  //     onError={() => {}}
+  //   />
+  // );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: "600",
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: "400",
+  },
+  highlight: {
+    fontWeight: "700",
   },
 });
+
+export default App;
