@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, Image, View, Text,TextInput} from 'react-native';
 import {Color,FontFamily} from '../GlobalStyles';
-import RegistrationInfo from '../components/RegistrationInfo';
+import {RegistrationInfo} from '../components/RegistrationInfo';
 const Registration1 = () => {
   return (
     <View style = {styles.view}>

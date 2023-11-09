@@ -1,8 +1,8 @@
-import * as React from 'react';
+import {React} from 'react';
 import { StyleSheet, Image, View, Text } from 'react-native';
 import { Color, FontFamily } from '../../GlobalStyles';
-import Button1 from '../Button1';
-import RegistrationInfo from '../RegistrationInfo';
+import {Button1} from '../Button1';
+import {RegistrationInfo} from '../RegistrationInfo';
 const RegistrationFrame = () => {
 
   return (

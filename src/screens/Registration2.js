@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { StyleSheet, Image, View, Text, Pressable } from 'react-native';
 import { Color, FontFamily } from '../GlobalStyles';
-import RegistrationInfo from '../components/RegistrationInfo';
+import {RegistrationInfo} from '../components/RegistrationInfo';
 // import { format } from "date-fns";
 // import ko from "date-fns/esm/locale/ko/index.js";
 // import DateTimePickerModal from 'react-native-modal-datetime-picker';

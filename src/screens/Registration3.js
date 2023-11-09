@@ -1,9 +1,8 @@
-import * as React from 'react';
+import {React} from 'react';
 import {StyleSheet, Image, View, Text} from 'react-native';
 import {Color, FontFamily} from '../GlobalStyles';
-import Button1 from '../components/Button1';
-import RegistrationInfo from '../components/RegistrationInfo';
-import SelectionList from '../components/SelectionList';
+import {RegistrationInfo} from '../components/RegistrationInfo';
+import {SelectionList} from '../components/SelectionList';
 const Registration3 = ({buttonCallBack}) => {
   return (
     <View style = {styles.view}>

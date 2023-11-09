@@ -1,11 +1,10 @@
-import * as React from 'react';
+import {React} from 'react';
 import { StyleSheet, Image, View,Text } from 'react-native';
 import { Color, FontFamily } from '../GlobalStyles';
 // import LinearGradient from 'react-native-linear-gradient';
-import Button1 from '../components/Button1';      
-import MessageFrame from '../components/MessageFrame';
+import {Button1} from '../components/Button1';      
 import {useNavigation} from '@react-navigation/native';
-import MessageBubble from '../components/MessageBubble';
+import {MessageBubble} from '../components/MessageBubble';
 const Intro = () => {
 
   const sloganMessage = "삶을 바꾸는\n건강한 자신감"
