@@ -3,7 +3,7 @@ import {
   StackActions,
   useRoute,
 } from '@react-navigation/native';
-import {React,useState} from 'react';
+import React,{useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'; // Stack 네비게이션
 import {StyleSheet, Image, View, Text, Easing} from 'react-native';

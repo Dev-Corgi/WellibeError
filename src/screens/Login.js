@@ -1,4 +1,4 @@
-import {React} from 'react';
+import React from 'react';
 import { StyleSheet, Image, View,Text } from 'react-native';
 import { Color, FontFamily } from '../GlobalStyles';
 import {LoginButton} from '../components/LoginButton';
