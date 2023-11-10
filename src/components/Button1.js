@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet, Image, View, Text, Pressable } from 'react-native';
 import { Color, FontFamily } from '../GlobalStyles';
 
