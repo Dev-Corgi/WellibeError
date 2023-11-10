@@ -10,7 +10,7 @@ import { Color,FontFamily } from "../GlobalStyles";
 
 import {moderateScale } from "react-native-size-matters";
 
-class MessageBubble extends React.Component{
+export class MessageBubble extends React.Component{
 render(){
     return(
         <View style = {styles.message}>
@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
         color: Color.black
     }
 })
-
-export default MessageBubble;
