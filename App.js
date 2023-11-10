@@ -24,7 +24,7 @@ export const navigationRef = createNavigationContainerRef();
 //     "Pretendard-Light": require("./assets/fonts/Pretendard-Light.otf"),
 //   });
 // };
-"hi"
+"hii"
 function App() {
 
   let [fontsLoaded] = useFonts({
